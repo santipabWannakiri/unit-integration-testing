@@ -21,4 +21,10 @@ public class InfluencerDetailModel {
         this.app_name = app_name;
         this.channel_name = channel_name;
     }
+
+    public InfluencerDetailModel(int id, Application app_name, String channel_name) {
+        this.id = id;
+        this.app_name = app_name;
+        this.channel_name = channel_name;
+    }
 }

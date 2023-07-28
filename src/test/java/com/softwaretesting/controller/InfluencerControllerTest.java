@@ -47,17 +47,66 @@ class InfluencerControllerTest {
     @Test
     public void recordNewInfluencerReturns_Success() throws Exception {
         RequestAddInfluencer influencer = new RequestAddInfluencer();
-        influencer.setName("Santipab");
-        influencer.setEmail("Santipab@gmail.com");
+        influencer.setName("TOM");
+        influencer.setEmail("tom@gmail.com");
         influencer.setApp_name("TIKTOK");
-        influencer.setChannel_name("Tiktok/yoyoChannel");
+        influencer.setChannel_name("https://tiktok/tomtt");
         String payload = mapper.writeValueAsString(influencer);
-
         mockMvc.perform(post("/api/influencer")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(payload))
                 .andExpect(status().isOk())
                 .andDo(print())
-                .andExpect(content().string("New Influencer name : " + influencer.getName() + " Added!!"));
+                .andExpect(content().string("New Influencer name : " + influencer.getName() + " Added!"));
     }
+
+    @Test
+    public void recordNewInfluencerReturn_BadRequest_Name_Is_Mandatory() throws Exception {
+        RequestAddInfluencer influencer = new RequestAddInfluencer();
+        influencer.setName("");
+        influencer.setEmail("tom@gmail.com");
+        influencer.setApp_name("TIKTOK");
+        influencer.setChannel_name("https://tiktok/tomtt");
+        String payload = mapper.writeValueAsString(influencer);
+        mockMvc.perform(post("/api/influencer")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payload))
+                .andExpect(status().isBadRequest())
+                .andDo(print())
+                .andExpect(content().string("name : is mandatory"));
+    }
+
+    @Test
+    public void recordNewInfluencerReturn_BadRequest_Email_Is_Mandatory() throws Exception {
+        RequestAddInfluencer influencer = new RequestAddInfluencer();
+        influencer.setName("TOM");
+        influencer.setEmail("");
+        influencer.setApp_name("TIKTOK");
+        influencer.setChannel_name("https://tiktok/tomtt");
+        String payload = mapper.writeValueAsString(influencer);
+        mockMvc.perform(post("/api/influencer")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payload))
+                .andExpect(status().isBadRequest())
+                .andDo(print())
+                .andExpect(content().string("email : is mandatory"));
+    }
+
+    @Test
+    public void recordNewInfluencerReturn_BadRequest_ChannelName_Incorrect() throws Exception {
+        RequestAddInfluencer influencer = new RequestAddInfluencer();
+        influencer.setName("TOM");
+        influencer.setEmail("tom@gmail.com");
+        influencer.setApp_name("TIKTOK");
+        influencer.setChannel_name("tik");
+        String payload = mapper.writeValueAsString(influencer);
+        mockMvc.perform(post("/api/influencer")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(payload))
+                .andExpect(status().isBadRequest())
+                .andDo(print())
+                .andExpect(content().string("channel_name : Channel name must be between 5 and 60 characters"));
+    }
+
+
 }

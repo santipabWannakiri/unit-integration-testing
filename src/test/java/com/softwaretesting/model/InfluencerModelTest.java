@@ -9,15 +9,15 @@ class InfluencerModelTest {
 
     @Test
     void modelTest() {
-        InfluencerDetailModel detial = new InfluencerDetailModel();
+        InfluencerDetailModel detail = new InfluencerDetailModel();
         InfluencerModel influencer = new InfluencerModel();
-        detial.setId(1);
-        detial.setApp_name(Application.YOUTUBE);
-        detial.setChannel_name("youtube.com/nokia3310Channel");
+        detail.setId(1);
+        detail.setApp_name(Application.YOUTUBE);
+        detail.setChannel_name("https://youtube.com/nokia3310Channel");
         influencer.setId(1);
         influencer.setName("Nokia3310");
         influencer.setEmail("nokia3310@gmail.com");
-        influencer.setInfluencerDetailModel(detial);
+        influencer.setInfluencerDetailModel(detail);
 
         assertEquals(1, influencer.getId());
         assertEquals("Nokia3310", influencer.getName());

@@ -25,4 +25,11 @@ public class InfluencerModel {
         this.email = email;
         this.influencerDetailModel = influencerDetailModel;
     }
+
+    public InfluencerModel(int id, String name, String email, InfluencerDetailModel influencerDetailModel) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.influencerDetailModel = influencerDetailModel;
+    }
 }
