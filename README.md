@@ -4,4 +4,4 @@ When delving into Spring Boot testing, I initially found it confusing due to the
 
 However, before deciding which framework to utilize for writing tests, it's essential to take a step back and start with the fundamental concept of "Types of Software Testing." Understanding the different types of software testing will help us determine which specific framework is best suited for each type of testing scenario in the Spring Boot environment.
 
-In view of this, I'll now discuss some methods for software testing as well as a few frameworks that perform well with Spring Boot Test.
+In regard to this, I'll share some methods for software testing as well as a few frameworks that perform well with Spring Boot Test.
