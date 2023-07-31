@@ -1,7 +1,6 @@
-package com.softwaretesting.controller;
+package com.softwaretesting.integration.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.softwaretesting.model.Application;
 import com.softwaretesting.model.request.RequestAddInfluencer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class InfluencerControllerTest {
+class InfluencerControllerMockMvcTest {
 
     @Autowired
     private MockMvc mockMvc;

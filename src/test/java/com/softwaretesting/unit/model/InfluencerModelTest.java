@@ -1,8 +1,10 @@
-package com.softwaretesting.model;
+package com.softwaretesting.unit.model;
 
+import com.softwaretesting.model.Application;
+import com.softwaretesting.model.InfluencerDetailModel;
+import com.softwaretesting.model.InfluencerModel;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class InfluencerModelTest {
@@ -24,7 +26,7 @@ class InfluencerModelTest {
         assertEquals("nokia3310@gmail.com", influencer.getEmail());
         assertEquals(1, influencer.getInfluencerDetailModel().getId());
         assertEquals(Application.YOUTUBE, influencer.getInfluencerDetailModel().getApp_name());
-        assertEquals("youtube.com/nokia3310Channel", influencer.getInfluencerDetailModel().getChannel_name());
+        assertEquals("https://youtube.com/nokia3310Channel", influencer.getInfluencerDetailModel().getChannel_name());
 
     }
 

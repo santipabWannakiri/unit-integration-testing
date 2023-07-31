@@ -1,4 +1,4 @@
-package com.softwaretesting.service;
+package com.softwaretesting.unit.service;
 
 import com.softwaretesting.model.Application;
 import com.softwaretesting.model.InfluencerDetailModel;
