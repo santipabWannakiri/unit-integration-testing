@@ -15,3 +15,4 @@ I'd like to advise looking at the illustration below for more details.
 ![enter image description here](images/TypeOfTesting.png)
 
 
+## Unit Testing and Integration Testing
