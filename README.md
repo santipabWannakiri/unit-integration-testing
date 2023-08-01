@@ -12,5 +12,6 @@ We can divide the type of testing into two majority groups as follows:
 2. Non-functional testing is focused on evaluating aspects of the software application that are not directly related to its specific functions or features. Instead, it aims to assess the software's quality attributes and characteristics that contribute to its overall performance, usability, and reliability.
 
 I'd like to advise looking at the illustration below for more details.
+![enter image description here](images/TypeOfTesting.png)
 
 
