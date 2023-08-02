@@ -16,3 +16,18 @@ I'd like to advise looking at the illustration below for more details.
 
 
 ## Unit Testing and Integration Testing
+In the illustration you're going to see, there are many types of testing under both Functional Testing and Non-Functional Testing. But in this article, We're going to focus on Functional testing, including Unit Testing and Integration Testing.
+
+Normally, Both Unit Testing and Integration Testing are performed by developers as part of the software development process.
+And to write testing in both types, there are many frameworks that can make it easy. However, before I discuss that part, I would like to share a bit about the key difference between Unit Testing and Integration Testing.
+
+`The overview comparison of Unit Testing and Integration Testing` 
+| Aspect                  | Unit Testing                                    | Integration Testing                              |
+|------------------------|-------------------------------------------------|--------------------------------------------------|
+| **Scope**              | Tests individual units or components in isolation | Verifies interactions between integrated units  |
+| **Purpose**            | Ensure correctness of individual units          | Validate system behavior when units are combined|
+| **Dependencies**       | Mocks or stubs external dependencies            | Requires actual integration with external systems|
+| **Test Environment**   | Lightweight and can run in isolation             | May require a more complex test environment      |
+| **Coverage**           | High code coverage, focused on individual units  | Covers interactions between integrated units    |
+| **Automation**         | Often highly automated                           | Some tests may involve manual testing            |
+
