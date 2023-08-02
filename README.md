@@ -31,3 +31,4 @@ And to write testing in both types, there are many frameworks that can make it e
 | **Coverage**           | High code coverage, focused on individual units  | Covers interactions between integrated units    |
 | **Automation**         | Often highly automated                           | Some tests may involve manual testing            |
 
+## Testing in Spring Boot
