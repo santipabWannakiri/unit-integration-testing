@@ -21,7 +21,7 @@ In the illustration you're going to see, there are many types of testing under b
 Normally, Both Unit Testing and Integration Testing are performed by developers as part of the software development process.
 And to write testing in both types, there are many frameworks that can make it easy. However, before I discuss that part, I would like to share a bit about the key difference between Unit Testing and Integration Testing.
 
-"**The overview comparison of Unit Testing and Integration Testing**"
+**The overview comparison of Unit Testing and Integration Testing**
 | Aspect                  | Unit Testing                                    | Integration Testing                              |
 |------------------------|-------------------------------------------------|--------------------------------------------------|
 | **Scope**              | Tests individual units or components in isolation | Verifies interactions between integrated units  |
@@ -36,4 +36,14 @@ In the provided illustration, you will notice the highlighted message emphasizin
 
 Both of the dependencies that I mentioned are a set of libraries and utilities that Spring Boot prepares for you, making it easier to write unit tests and leading to more maintainable, efficient, and reliable tests, ultimately improving the overall quality of your application.
 
-Hence, before delving into writing Unit Testing and Integration Testing, let me provide a brief overview of the libraries or frameworks we will be using in this article.
+Hence, before delving into writing Unit Testing and Integration Testing, let me provide a brief overview of the libraries we will be using in this article.
+
+**The overview of the libraries for Unit Testing and Integration Testing**
+> Dependencies based on spring-boot-starter-test version 3.1.2
+
+| Library   | Description                                                        |
+|----------------|--------------------------------------------------------------------|
+| JUnit 5.9.3    | JUnit is a widely-used testing framework for Java, simplifying unit test creation with annotations and assertions. |
+| Mockito 5.3.1  | Mockito is a powerful mocking framework for Java, facilitating the creation of mock objects for isolating dependencies in tests. |
+| MockMvc        | MockMvc is a component of Spring Test, enabling comprehensive testing of Spring MVC controllers and RESTful endpoints. |
+| TestRestTemplate | TestRestTemplate is used for integration testing of RESTful APIs in Spring Boot, validating component interactions. |
