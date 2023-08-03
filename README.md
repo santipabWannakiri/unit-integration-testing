@@ -35,3 +35,5 @@ And to write testing in both types, there are many frameworks that can make it e
 In the provided illustration, you will notice the highlighted message emphasizing that Spring Boot strongly supports both Unit Testing and Integration Testing. When you create a new Spring Boot Project, it automatically includes the necessary testing dependencies, such as "**spring-boot-starter-test**" If you wish to perform testing with Spring Security, the "**spring-security-test**" dependency is also required.
 
 Both of the dependencies that I mentioned are a set of libraries and utilities that Spring Boot prepares for you, making it easier to write unit tests and leading to more maintainable, efficient, and reliable tests, ultimately improving the overall quality of your application.
+
+Hence, before delving into writing Unit Testing and Integration Testing, let me provide a brief overview of the libraries or frameworks we will be using in this article.
