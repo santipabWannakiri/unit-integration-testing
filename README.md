@@ -47,3 +47,7 @@ Hence, before delving into writing Unit Testing and Integration Testing, let me 
 | Mockito 5.3.1  | Mockito is a powerful mocking framework for Java, facilitating the creation of mock objects for isolating dependencies in tests. |
 | MockMvc        | MockMvc is a component of Spring Test, enabling comprehensive testing of Spring MVC controllers and RESTful endpoints. |
 | TestRestTemplate | TestRestTemplate is used for integration testing of RESTful APIs in Spring Boot, validating component interactions. |
+
+## Coding Time!!
+
+Prior to proceeding with writing the unit testing and integration testing, I'd like to provide a brief overview of the project structure and the class under consideration for testing. Kindly refer to the illustration presented below.
