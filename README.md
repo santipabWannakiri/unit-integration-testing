@@ -55,3 +55,5 @@ Prior to proceeding with writing the unit testing and integration testing, I'd l
 ![enter image description here](images/project-structure.JPG)
 
 The architectural style is known as the "MVC" (Model-View-Controller) pattern, which may include a "Service" layer and a "Repository" layer as part of the Model component. The "MVCS" term is not commonly used or established in the software development community.
+
+However, In this article, our primary focus will be on conducting testing for the Model, Service, and Controller components. Typically, the Repository is tested when there are specific query customizations or complex data access operations.
