@@ -51,3 +51,7 @@ Hence, before delving into writing Unit Testing and Integration Testing, let me 
 ## Coding Time!!
 
 Prior to proceeding with writing the unit testing and integration testing, I'd like to provide a brief overview of the project structure and the class under consideration for testing. Kindly refer to the illustration presented below.
+
+![enter image description here](images/project-structure.JPG)
+
+The architectural style is known as the "MVC" (Model-View-Controller) pattern, which may include a "Service" layer and a "Repository" layer as part of the Model component. The "MVCS" term is not commonly used or established in the software development community.
