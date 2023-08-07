@@ -66,3 +66,10 @@ To facilitate comprehension, I will create a table below that illustrates the co
 | Controller     | Integration Testing      | MockMvc                    | Simulate HTTP requests and validate controller behavior.                                 |
 | Controller     | Integration Testing      | TestRestTemplate           | Test controller endpoints by sending actual HTTP requests.                                |
 
+From the table provided above, you will observe that I conducted tests on the controller using both the MockMvc and TestRestTemplate libraries. While both of these tools fulfill the role of Integration testing. However, a significant distinction exists in terms of the testing concept and purpose.
+
+**MockMvc** : This library creates a simulated applicationContext, which means it doesn't fully initialize all configurations or initiate the complete application. While MockMvc is advantageous for focused testing of individual controller endpoints, allowing precise examination of request and response handling, it might overlook potential issues that exclusively surface when the entire application is fully operational.
+
+**TestRestTemplate** : In contrast, TestRestTemplate takes a more expansive approach by initializing the complete application. It starts the embedded server and loads all configurations akin to the normal startup procedure. This thorough testing environment is especially effective in revealing integration concerns and interactions among components that could escape detection when using MockMvc.
+
+In conclusion, it's important to note that both MockMvc and TestRestTemplate possess their own respective strengths and weaknesses. The choice between the two hinges on your specific use case, testing objectives, and trade-offs. While MockMvc excels in pinpointing issues within individual endpoints, TestRestTemplate excels in exposing broader integration complexities. Ultimately, the decision of which tool to employ should be guided by the unique requirements and challenges of your application.
