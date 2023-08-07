@@ -57,3 +57,12 @@ Prior to proceeding with writing the unit testing and integration testing, I'd l
 The architectural style is known as the "MVC" (Model-View-Controller) pattern, which may include a "Service" layer and a "Repository" layer as part of the Model component. The "MVCS" term is not commonly used or established in the software development community.
 
 However, In this article, our primary focus will be on conducting testing for the Model, Service, and Controller components. Typically, the Repository is tested when there are specific query customizations or complex data access operations.
+
+To facilitate comprehension, I will create a table below that illustrates the correlation between the MVC architectural style, the respective testing methods, and the libraries slated for utilization in this article.
+| MVCS           | Types of Testing         | Library                    | Areas of Testing                                                                        |
+|----------------|--------------------------|----------------------------|------------------------------------------------------------------------------------------|
+| Model          | Unit Testing             | JUnit                      | Ensure correctness of model attributes, behaviors, and business logic.                  |
+| Service        | Unit Testing             | Mockito                    | Test business logic and interactions within service methods.                             |
+| Controller     | Integration Testing      | MockMvc                    | Simulate HTTP requests and validate controller behavior.                                 |
+| Controller     | Integration Testing      | TestRestTemplate           | Test controller endpoints by sending actual HTTP requests.                                |
+
