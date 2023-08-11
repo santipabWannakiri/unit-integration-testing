@@ -48,6 +48,30 @@ Hence, before delving into writing Unit Testing and Integration Testing, let me 
 | MockMvc        | MockMvc is a component of Spring Test, enabling comprehensive testing of Spring MVC controllers and RESTful endpoints. |
 | TestRestTemplate | TestRestTemplate is used for integration testing of RESTful APIs in Spring Boot, validating component interactions. |
 
-## Coding Time!!
+## Architectural style and Testing
 
 Prior to proceeding with writing the unit testing and integration testing, I'd like to provide a brief overview of the project structure and the class under consideration for testing. Kindly refer to the illustration presented below.
+
+![enter image description here](images/project-structure.JPG)
+
+The architectural style is known as the "MVC" (Model-View-Controller) pattern, which may include a "Service" layer and a "Repository" layer as part of the Model component. The "MVCS" term is not commonly used or established in the software development community.
+
+However, In this article, our primary focus will be on conducting testing for the Model, Service, and Controller components. Typically, the Repository is tested when there are specific query customizations or complex data access operations.
+
+To facilitate comprehension, I will create a table below that illustrates the correlation between the MVC architectural style, the respective testing methods, and the libraries slated for utilization in this article.
+| MVCS           | Types of Testing         | Library                    | Areas of Testing                                                                        |
+|----------------|--------------------------|----------------------------|------------------------------------------------------------------------------------------|
+| Model          | Unit Testing             | JUnit                      | Ensure correctness of model attributes, behaviors, and business logic.                  |
+| Service        | Unit Testing             | Mockito                    | Test business logic and interactions within service methods.                             |
+| Controller     | Integration Testing      | MockMvc                    | Simulate HTTP requests and validate controller behavior.                                 |
+| Controller     | Integration Testing      | TestRestTemplate           | Test controller endpoints by sending actual HTTP requests.                                |
+
+From the table provided above, you will observe that I conducted tests on the controller using both the MockMvc and TestRestTemplate libraries. While both of these tools fulfill the role of Integration testing. However, a significant distinction exists in terms of the testing concept and purpose.
+
+**MockMvc** : This library creates a simulated applicationContext, which means it doesn't fully initialize all configurations or initiate the complete application. While MockMvc is advantageous for focused testing of individual controller endpoints, allowing precise examination of request and response handling, it might overlook potential issues that exclusively surface when the entire application is fully operational.
+
+**TestRestTemplate** : In contrast, TestRestTemplate takes a more expansive approach by initializing the complete application. It starts the embedded server and loads all configurations akin to the normal startup procedure. This thorough testing environment is especially effective in revealing integration concerns and interactions among components that could escape detection when using MockMvc.
+
+In conclusion, it's important to note that both MockMvc and TestRestTemplate possess their own respective strengths and weaknesses. The choice between the two hinges on your specific use case, testing objectives, and trade-offs. While MockMvc excels in pinpointing issues within individual endpoints, TestRestTemplate excels in exposing broader integration complexities. Ultimately, the decision of which tool to employ should be guided by the unique requirements and challenges of your application.
+
+## Coding Time!! 
