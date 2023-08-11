@@ -75,3 +75,7 @@ From the table provided above, you will observe that I conducted tests on the co
 In conclusion, it's important to note that both MockMvc and TestRestTemplate possess their own respective strengths and weaknesses. The choice between the two hinges on your specific use case, testing objectives, and trade-offs. While MockMvc excels in pinpointing issues within individual endpoints, TestRestTemplate excels in exposing broader integration complexities. Ultimately, the decision of which tool to employ should be guided by the unique requirements and challenges of your application.
 
 ## Coding Time!! 
+> **Testing Model by using Junit** 
+Let's examine the provided Model example code below.
+
+![enter image description here](images/model.JPG)
