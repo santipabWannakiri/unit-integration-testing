@@ -83,3 +83,7 @@ Let's examine the provided Model example code below.
 We can craft unit tests using JUnit. To generate a test for a class or method within IntelliJ IDEA, you can employ shortcuts. Simply press Ctrl+Shift+T. 
 
 As for the testing code section, it should align with your preferred style or the specific attributes you wish to assess. Nonetheless, for the purposes of this illustration, I will concentrate solely on testing the 'getMethod' function.
+
+![enter image description here](images/modelTesting.JPG)
+
+Focusing on testing 'get' methods over 'set' methods is important because 'get' methods often involve complex logic, influence critical functionality, impact user experience, and their errors can propagate throughout the system. Ensuring their accuracy and reliability helps maintain data consistency, prevent issues, and improve overall software quality.
