@@ -79,3 +79,7 @@ In conclusion, it's important to note that both MockMvc and TestRestTemplate pos
 Let's examine the provided Model example code below.
 
 ![enter image description here](images/model.JPG)
+
+We can craft unit tests using JUnit. To generate a test for a class or method within IntelliJ IDEA, you can employ shortcuts. Simply press Ctrl+Shift+T. 
+
+As for the testing code section, it should align with your preferred style or the specific attributes you wish to assess. Nonetheless, for the purposes of this illustration, I will concentrate solely on testing the 'getMethod' function.
