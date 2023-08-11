@@ -48,7 +48,7 @@ Hence, before delving into writing Unit Testing and Integration Testing, let me 
 | MockMvc        | MockMvc is a component of Spring Test, enabling comprehensive testing of Spring MVC controllers and RESTful endpoints. |
 | TestRestTemplate | TestRestTemplate is used for integration testing of RESTful APIs in Spring Boot, validating component interactions. |
 
-## Coding Time!!
+## Architectural style and Testing
 
 Prior to proceeding with writing the unit testing and integration testing, I'd like to provide a brief overview of the project structure and the class under consideration for testing. Kindly refer to the illustration presented below.
 
@@ -73,3 +73,5 @@ From the table provided above, you will observe that I conducted tests on the co
 **TestRestTemplate** : In contrast, TestRestTemplate takes a more expansive approach by initializing the complete application. It starts the embedded server and loads all configurations akin to the normal startup procedure. This thorough testing environment is especially effective in revealing integration concerns and interactions among components that could escape detection when using MockMvc.
 
 In conclusion, it's important to note that both MockMvc and TestRestTemplate possess their own respective strengths and weaknesses. The choice between the two hinges on your specific use case, testing objectives, and trade-offs. While MockMvc excels in pinpointing issues within individual endpoints, TestRestTemplate excels in exposing broader integration complexities. Ultimately, the decision of which tool to employ should be guided by the unique requirements and challenges of your application.
+
+## Coding Time!! 
